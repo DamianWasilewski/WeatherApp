@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import WeatherSearch from '../../components/WeatherSearch/WeatherSearch';
 import WeatherTile from '../../components/WeatherTile/WeatherTile';
+import Navbar from '../../components/NavBar/NavBar';
 
 import './AppContainer.css';
 import axios from 'axios';
@@ -25,7 +26,6 @@ class AppContainer extends Component {
     const searchedText = `select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}') and u='c'`
     axios.get("https://query.yahooapis.com/v1/public/yql?q=" + searchedText + "&format=json")
     .then( response => {
-      //console.log(response);
       this.setState({
         temperature: response.data.query.results.channel.item.condition.temp,
         city: response.data.query.results.channel.location.city,
@@ -47,11 +47,13 @@ class AppContainer extends Component {
         error: true
       })
     });
+    e.target.elements.city.value = '';
   }
 
   render () {
       return (
         <div>
+          <Navbar />
           <section>
             <WeatherSearch getWeather = {this.getWeather} error={this.state.error}/>
           </section>

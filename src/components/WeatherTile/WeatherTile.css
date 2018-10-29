@@ -1,20 +1,39 @@
-.Tile {
-  width: 100px;
-  padding: 16px;
-  text-align: center;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 3px #ccc;
-  margin: 10px;
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.output_items {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 40px;
+}
+
+.output_items h2 {
+  margin: auto;
+  padding: 1rem;
+}
+
+.output_item {
   box-sizing: border-box;
-  cursor: pointer;
+  flex-basis: 45%;
+  padding: 1rem;
 }
 
-.Tile:hover,
-.Tile:active {
-  background-color: #C0DDF5;
+.output_item:last-child {
+  flex-basis: 100%;
 }
 
-.Placeholder {
-  margin: 16px 0;
-  color: #ccc;
+@media (min-width: 499px) {
+  .container {
+    width: 40%
+  }
+}
+@media (min-width: 799px) {
+  .container {
+    width: 20%
+  }
 }
