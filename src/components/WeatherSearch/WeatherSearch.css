@@ -1,5 +1,5 @@
 ::placeholder {
-  color: whitesmoke;
+  color: rgba(255, 255, 255, 0.2);
   font-family: 'Merriweather', serif;
   font-size: 0.9rem;
 }
@@ -63,7 +63,13 @@
     width: 40%;
   }
 }
-@media (min-width: 799px) {
+@media (min-width: 999px) {
+  .container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1299px) {
   .container {
     width: 20%;
   }

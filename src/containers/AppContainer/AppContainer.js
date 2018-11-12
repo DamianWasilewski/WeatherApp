@@ -31,10 +31,13 @@ class AppContainer extends Component {
         city: response.data.query.results.channel.location.city,
         country: response.data.query.results.channel.location.country,
         humidity: response.data.query.results.channel.atmosphere.humidity,
+        pressure: response.data.query.results.channel.atmosphere.pressure,
+        visibility: response.data.query.results.channel.atmosphere.visibility,
         wind: response.data.query.results.channel.wind.speed,
         condition: response.data.query.results.channel.item.condition.text,
         error: false
       });
+      console.log(response);
     })
     .catch(error => {
       this.setState({
@@ -44,6 +47,8 @@ class AppContainer extends Component {
         humidity: undefined,
         wind: undefined,
         condition: undefined,
+        pressure: undefined,
+        visibility: undefined,
         error: true
       })
     });
@@ -65,7 +70,9 @@ class AppContainer extends Component {
             region={this.state.city}
             humidity={this.state.humidity}
             wind={this.state.wind}
-            condition={this.state.condition} />
+            condition={this.state.condition}
+            pressure={this.state.pressure}
+            visibility={this.state.visibility} />
           </section>
         </div>
       );

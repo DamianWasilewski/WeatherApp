@@ -5,7 +5,7 @@ import './NavBar.css';
 
 const navbar = (props) => (
   <div className='navbar'>
-    <a href='#'>WeatherApp</a>
+    <a href=''>WeatherApp</a>
   </div>
 );
 
