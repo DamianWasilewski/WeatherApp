@@ -1,3 +1,24 @@
+<b>WeatherApp</b><br>
+
+App that fetches data for desired city and outputs it to the user. API used: Yahoo weather API.<br>
+
+<b>Data fetched:</b><br>
+<ul>
+  <li>Temperature</li>
+  <li>Country</li>
+  <li>Humidity</li>
+  <li>Pressure</li>
+  <li>Visibility</li>
+  <li>Wind speed</li>
+  <li>Conditions</li>
+</ul>
+
+
+To fetch data just enter desired city to the input and click search button.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
